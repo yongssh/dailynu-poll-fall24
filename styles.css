@@ -32,12 +32,12 @@ body {
     background-color: #ffff;
 }
 
-.main-content-wrapper {
+ /*.main-content-wrapper {
     
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     margin-top: 20px; 
-}
+}*/
 .story-link {
     padding-top:10px;
     padding-bottom:10px;
@@ -156,13 +156,27 @@ h1 {
 
 .main-content {
     font-family: Georgia, serif;
-    margin-left: 270px; /* Leave space for the sidebar */
-    margin-top: 80px; /* Leave space for the broad topics */
-    padding: 20px;
+    width: 80%; /* Increase the width to 80% of the parent container */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Add padding for inner spacing */
+    margin: 0 auto; /* Center align the content */
+
 }
 .poll-section {
     display: none;
+    width: auto;
+    height: auto;
+    padding-left: 20%;
+    background-color: #f9f9f9; /* Optional: add a light background color */
 }
+
 .poll-section.active {
     display: block;
+    
+}
+
+.poll-section iframe {
+    width: 100%; /* Full width of the parent */
+    height: auto; /* Set a specific height for all iframes */
+    border: none; /* Remove border */
 }
