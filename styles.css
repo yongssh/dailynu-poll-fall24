@@ -1,3 +1,15 @@
+:root{
+    --main-bg-color: #FAFAFA;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    color:  #501e4c;
+    border-bottom: 1px solid #ccc;
+    width: 100%
+}
 body {
     font-family: Georgia, serif;
     color: #501e4c;
@@ -6,18 +18,60 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--main-bg-color);
 }
 .header-container {
     width: 100%;
     text-align: center;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff;
 }
 
-.daily-logo{
+.main-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px; /* Space between header and content */
+}
+.story-link {
+    padding-right: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #0073e6;
+}
+
+
+/*@media (max-width: 768px) {
+    .title {
+        font-size: 1.4rem;
+        color: #501e4c;
+    }
+
+    .daily-logo { /make logo smaller on smaller screens
+        height: 60px; 
+    }
+*/
+.story-link:hover {
+    text-decoration: underline;
+}
+
+.daily-logo {
+    width: 300px;
     height: 150px;
-    width: 400px;
+    padding-left: 30px;
+}
+
+.logo-link{
+    padding-left: 30px;
+}
+
+.page-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #501e4c;
 }
 
 h1 {
@@ -25,37 +79,49 @@ h1 {
     color: #FFF;
     text-align: center; 
 }
+.category-buttons-container{
+    display: flex;
+    flex-direction: row;
+}
 .broad-topic-container {
-    position: fixed;
-    font-family: Georgia, serif;
-    top:120px;
-    left: 0;
-    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: row;
     background-color: #501e4c;
-    color: #FFFF;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 2px solid #ccc;
+    padding: 0.3rem 0.6rem;
+    border: border-box;
 }
 
 
 .broad-topic-container button {
-    font-family: Georgia, serif;
-    color: #501e4c;
-    transition: background-color 0.3s, color 0.3s;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    color: #FFFF;
+    transition: all 0.3s ease;
+    font-family: var(--body-font);
 }
 
 .broad-topic-container button.active {
     font-family: Georgia, serif;
-
-    background-color: #501e4c;
-    color: white;
-    border: 2px solid #501e4c; /* Make it stand out more */
+    display: flex;
+    width: 100%;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 5px;
+    border: none;
+    color: #FFFF;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .sidebar {
     position: fixed;
-    top: 150px; /* Below the broad topics */
+    top: 200px; /* Below the broad topics */
     bottom: 0;
     left: 0;
     width: 250px;
