@@ -1,5 +1,4 @@
-
-// specific questions from each topic
+// Specific questions from each topic
 const topicsData = {
     Demographics: [
         { id: 'class-year', label: 'Class Year' },
@@ -14,7 +13,6 @@ const topicsData = {
         { id: 'varsity-athletes', label: 'Varsity Athletes' },
         { id: 'greek-life', label: 'Greek Life' },
         { id: 'religious-affiliation', label: 'Religious Affiliation' },
-
     ],
     Admissions: [
         { id: 'admissions-round-accepted', label: 'Admissions Round Accepted' },
@@ -41,7 +39,7 @@ const topicsData = {
         { id: 'social-media', label: 'Social Media' },
         { id: 'reading', label: 'Reading' },
     ],
-    NationalPolitics:[
+    NationalPolitics: [
         { id: 'political-leaning', label: 'Political Leaning' },
         { id: 'voting-likelihood', label: 'Voting Likelihood' },
         { id: 'voting-preference', label: 'Voting Preference' },
@@ -56,8 +54,23 @@ const specificTopicsContainer = document.getElementById('specific-topics');
 const sidebarTitle = document.getElementById('sidebar-title');
 const sections = document.querySelectorAll('.poll-section');
 
-let specificTopicClicked = false; // Flag to track if a specific topic has been clicked
-// Define the default specific question for each broad topic
+// Function to toggle the sidebar visibility
+function toggleSidebar() {
+    // Toggle the 'active' class on the sidebar
+    sidebar.classList.toggle('active');
+
+    // Set display property based on the sidebar's active status
+    if (sidebar.classList.contains('active')) {
+        sidebar.style.display = 'block'; // Show the sidebar
+    } else {
+        sidebar.style.display = 'none'; // Hide the sidebar
+    }
+}
+
+// Track if a specific question/topic has been clicked
+let specificTopicClicked = false;
+
+// Default specific question for each broad topic
 const defaultSpecificTopic = {
     Demographics: 'Class Year',
     Admissions: 'Admissions Round Accepted',
@@ -65,45 +78,39 @@ const defaultSpecificTopic = {
     Lifestyle: 'Alcohol',
     NationalPolitics: 'Political Leaning',
 };
-// Select all the broad topic buttons
 
-// Iterate over each broad topic button
+// For each broad topic button
 broadTopicButtons.forEach(button => {
     button.addEventListener('click', () => {
-
         // Remove 'active' class from all broad topic buttons
         broadTopicButtons.forEach(btn => btn.classList.remove('active'));
-        
+
         // Add 'active' class to the clicked button
         button.classList.add('active');
 
         // Hide all sections
         sections.forEach(section => section.classList.remove('active'));
 
-        // Get the broad topic that was clicked
+        // Get clicked broad topic/category
         const broadTopic = button.getAttribute('data-topic');
 
         // Clear specific topics container for new broad topic
         specificTopicsContainer.innerHTML = '';
-        
 
-        
-// If there are specific topics for this broad topic, create buttons
-if (topicsData[broadTopic]) {
-    topicsData[broadTopic].forEach(topic => {
+        // If specific topics/questions exist for this broad topic, create buttons
+        if (topicsData[broadTopic]) {
+            topicsData[broadTopic].forEach(topic => {
+                // Button for each specific question
+                const topicButton = document.createElement('button');
+                topicButton.innerText = topic.label;
+                topicButton.classList.add('specific-topic-button');
 
-        // Button for each specific question
-        const topicButton = document.createElement('button');
-        topicButton.innerText = topic.label;
-        topicButton.classList.add('specific-topic-button');
-        
-       
                 // Add click event listener for each specific topic button
                 topicButton.addEventListener('click', () => {
                     // Hide all sections
                     sections.forEach(section => section.classList.remove('active'));
-                    
-                    // Show the selected section
+
+                    // Only show the selected section
                     const sectionElement = document.getElementById(topic.id);
                     if (sectionElement) {
                         sectionElement.classList.add('active');
@@ -113,55 +120,52 @@ if (topicsData[broadTopic]) {
                     const specificButtons = specificTopicsContainer.querySelectorAll('.specific-topic-button');
                     specificButtons.forEach(btn => btn.classList.remove('active'));
 
-                    // Add 'active' class to the clicked specific topic button
+                    // Add 'active' class to the clicked specific button
                     topicButton.classList.add('active');
                 });
 
-        // Append the topic button to the specific topics container
-        specificTopicsContainer.appendChild(topicButton);
+                // Append the topic button to the specific topics container
+                specificTopicsContainer.appendChild(topicButton);
+            });
+        }
+
+        // Automatically trigger specific topics for each broad topic
+        if (broadTopic === 'Demographics') {
+            const demographicsDefaultButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Class Year');
+            if (demographicsDefaultButton) {
+                demographicsDefaultButton.click();
+            }
+        }
+
+        if (broadTopic === 'Admissions') {
+            const admissionsRoundAcceptedButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Admissions Round Accepted');
+            if (admissionsRoundAcceptedButton) {
+                admissionsRoundAcceptedButton.click();
+            }
+        }
+
+        if (broadTopic === 'NorthwesternIssues') {
+            const NUIssuesDefaultButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Generative AI Use');
+            if (NUIssuesDefaultButton) {
+                NUIssuesDefaultButton.click();
+            }
+        }
+
+        if (broadTopic === 'Lifestyle') {
+            const alcoholDefaultButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Alcohol');
+            if (alcoholDefaultButton) {
+                alcoholDefaultButton.click();
+            }
+        }
+
+        if (broadTopic === 'NationalPolitics') {
+            const nationalPoliticsDefaultButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Political Leaning');
+            if (nationalPoliticsDefaultButton) {
+                nationalPoliticsDefaultButton.click();
+            }
+        }
     });
-}
-
-    if (broadTopic === 'Demographics') {
-        const demographicsDefaultButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Class Year');
-        if (demographicsDefaultButton) {
-            demographicsDefaultButton.click();
-        }
-    };
-
-    // Automatically trigger the specific topic if the broad topic is Admissions
-    if (broadTopic === 'Admissions') {
-        const admissionsRoundAcceptedButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Admissions Round Accepted');
-        if (admissionsRoundAcceptedButton) {
-            admissionsRoundAcceptedButton.click();
-        }
-    };
-    // Automatically trigger the specific topic if the broad topic is NU Issues
-    if (broadTopic === 'NorthwesternIssues') {
-        const NUIssuesDefaultButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Generative AI Use');
-        if (NUIssuesDefaultButton) {
-            NUIssuesDefaultButton.click();
-        }
-    };
-    // Automatically trigger the specific topic if the broad topic is Lifestyle
-    if (broadTopic === 'Lifestyle') {
-        const alcoholDefaultButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Alcohol');
-        if (alcoholDefaultButton) {
-            alcoholDefaultButton.click();
-        }
-    };
-
-       // Automatically trigger the specific topic if the broad topic is National Politics
-       if (broadTopic === 'NationalPolitics') {
-        const nationalPoliticsDefaultButton = Array.from(specificTopicsContainer.querySelectorAll('.specific-topic-button')).find(btn => btn.innerText === 'Political Leaning');
-        if (nationalPoliticsDefaultButton) {
-            nationalPoliticsDefaultButton.click();
-        }
-    };
-
 });
-});
-
 
 // Automatically display "Class Year" section on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -169,11 +173,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const demographicsButton = document.querySelector('button[data-topic="Demographics"]');
     demographicsButton.click();
 
-    // Simulate clicking the "Class Year" button
+    // Trigger the "Class Year" button to select
     const specificButtons = specificTopicsContainer.querySelectorAll('.specific-topic-button');
     specificButtons.forEach(btn => {
         if (btn.innerText === 'Class Year') {
             btn.click();
         }
     });
+});
+
+document.getElementById('toggle-sidebar').addEventListener('click', function() {
+    var sidebar = document.getElementById('sidebar');
+    // Toggle sidebar activee
+    sidebar.classList.toggle('active'); 
 });

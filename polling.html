@@ -10,7 +10,7 @@
 
 
   <!-- Header Section -->
-  <header class="header">
+<header class="header">
 
     <a href="https://dailynorthwestern.com" class="daily-logo">
         <img src="dailylogo.svg" alt="Daily Northwestern Logo">
@@ -19,9 +19,10 @@
 
     <h1 class="page-title">2024 Fall Undergraduate Poll</h1> 
     <a href="https://dailynorthwestern.com" class="story-link"> Back to story</a>
-  </header>
+</header>
+<button class="toggle-sidebar" id="sidebar-toggle" onclick="toggleSidebar()">☰</button>
 
-<body>
+<div class="all-content">
     <div class="broad-topic-container">
 
         <button data-topic="Demographics">Demographics</button>
@@ -29,147 +30,150 @@
         <button data-topic="NorthwesternIssues">Northwestern Issues</button>
         <button data-topic="Lifestyle">Lifestyle</button>
         <button data-topic="NationalPolitics">National Politics</button>
-      
-    </div>
     
-
-    <div id="sidebar" class="sidebar">
-
-        <div class="specific-topics" id="specific-topics">
-            <!-- Buttons for specific questions will appear here -->
-             
-        </div>
     </div>
 
-    <div class="main-content">
+    <div class="questions-and-dataviz">
+        <div id="sidebar" class="sidebar">
 
-        <!-- Demographics -->
-        <div id="class-year" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19844340"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19844340/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-         </div>
-        <div id="primary-school" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19860630"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19860630/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-        </div>
-        <div id="gender" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19860823"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19860823/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-        </div>
-        <div id="sexual-orientation" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19856031"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19856031/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="international-student-status" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19861394"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19861394/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="country-of-origin" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19851723"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19851723/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="state-of-origin" class="poll-section">
-            <div class="flourish-embed flourish-map" data-src="visualisation/19861421"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19861421/thumbnail" width="100%" alt="map visualization" /></noscript></div>        
-        </div>
-        <div id="race-ethnicity" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19856840"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19856840/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="financial-aid" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19851763"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19851763/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
-        <div id="varsity-athletes" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19891370"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19891370/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
-        <div id="greek-life" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19891516"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19891516/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
-        <div id="religious-affiliation" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19891555"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19891555/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        
-        <!-- Admissions -->
-        <div id="admissions-round-accepted" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19912818"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19912818/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="number-of-applications" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19890219"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19890219/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
-        <div id="graduating-class-size" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19871250"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19871250/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
-        <div id="high-school-type" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19872692"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872692/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="cost-of-attendance" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19872833"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872833/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="extracurriculars" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19912979"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19912979/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="legacy-and-relatives" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19913025"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19913025/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            <div class="specific-topics" id="specific-topics">
+                <!-- Buttons for specific questions will appear here -->
+                
+            </div>
         </div>
 
-        <!-- Northwestern Issues -->
-        <div id="generative-ai-use" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19896084"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19896084/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
-        <div id="satisfaction" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19890424"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19890424/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
-        <div id="off-campus-rent" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19890467"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19890467/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="schill-approval" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19851781"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19851781/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19873095"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19873095/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19872367"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872367/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-        </div>
-        <div id="encampment-approval" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19873369"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19873369/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="deal-approval" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19872727"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872727/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
+        <div class="main-content">
 
-        <!-- Lifestyle -->
-        <div id="alcohol" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19895782"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19895782/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="drugs" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19895900"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19895900/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="sex" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19872414"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872414/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19874458"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19874458/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19874513"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19874513/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-        </div>
-        <div id="romantic-relationships" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19874631"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19874631/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="social-media" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19874721"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19874721/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        <div id="reading" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19890501"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19890501/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-        </div>
-        <!-- National Politics -->
-        <div id="political-leaning" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19873483"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19873483/thumbnail" width="100%" alt="chart visualization" /></noscript></div>      
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19875004"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19875004/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
-         
-        <div id="voting-likelihood" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19880517"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19880517/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
-        
-        <div id="voting-preference" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19873801"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19873801/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
-         </div>
+            <!-- Demographics -->
+            <div id="class-year" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19844340"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19844340/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+            </div>
+            <div id="primary-school" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19860630"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19860630/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+            </div>
+            <div id="gender" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19860823"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19860823/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+            </div>
+            <div id="sexual-orientation" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19856031"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19856031/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="international-student-status" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19861394"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19861394/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="country-of-origin" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19851723"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19851723/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="state-of-origin" class="poll-section">
+                <div class="flourish-embed flourish-map" data-src="visualisation/19861421"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19861421/thumbnail" width="100%" alt="map visualization" /></noscript></div>        
+            </div>
+            <div id="race-ethnicity" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19856840"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19856840/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="financial-aid" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19851763"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19851763/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
+            <div id="varsity-athletes" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19891370"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19891370/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
+            <div id="greek-life" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19891516"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19891516/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
+            <div id="religious-affiliation" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19891555"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19891555/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            
+            <!-- Admissions -->
+            <div id="admissions-round-accepted" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19912818"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19912818/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="number-of-applications" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19890219"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19890219/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
+            <div id="graduating-class-size" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19871250"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19871250/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
+            <div id="high-school-type" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19872692"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872692/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="cost-of-attendance" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19872833"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872833/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="extracurriculars" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19912979"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19912979/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="legacy-and-relatives" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19913025"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19913025/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
 
-        <div id="protest-attendance-history" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19913892"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19913892/thumbnail" width="100%" alt="chart visualization" /></noscript></div>      
-        </div>
+            <!-- Northwestern Issues -->
+            <div id="generative-ai-use" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19896084"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19896084/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
+            <div id="satisfaction" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19890424"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19890424/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
+            <div id="off-campus-rent" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19890467"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19890467/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="schill-approval" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19851781"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19851781/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19873095"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19873095/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19872367"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872367/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+            </div>
+            <div id="encampment-approval" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19873369"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19873369/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="deal-approval" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19872727"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872727/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
 
-        <div id="israel-palestine" class="poll-section">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/19895661"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19895661/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
-        </div>
+            <!-- Lifestyle -->
+            <div id="alcohol" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19895782"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19895782/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="drugs" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19895900"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19895900/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="sex" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19872414"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19872414/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19874458"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19874458/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19874513"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19874513/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+            </div>
+            <div id="romantic-relationships" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19874631"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19874631/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="social-media" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19874721"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19874721/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            <div id="reading" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19890501"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19890501/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+            </div>
+            <!-- National Politics -->
+            <div id="political-leaning" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19873483"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19873483/thumbnail" width="100%" alt="chart visualization" /></noscript></div>      
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19875004"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19875004/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
+            
+            <div id="voting-likelihood" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19880517"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19880517/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+            
+            <div id="voting-preference" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19873801"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19873801/thumbnail" width="100%" alt="chart visualization" /></noscript></div>       
+            </div>
 
-   
-</body>
+            <div id="protest-attendance-history" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19913892"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19913892/thumbnail" width="100%" alt="chart visualization" /></noscript></div>      
+            </div>
+
+            <div id="israel-palestine" class="poll-section">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/19895661"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/19895661/thumbnail" width="100%" alt="chart visualization" /></noscript></div>        
+            </div>
+
+    
+            
+        </div>
+    </div>
+</div>
 </html>
 <script src="page.js"></script>
