@@ -1,0 +1,88 @@
+body {
+    font-family: Georgia, serif;
+    color: #501e4c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.daily-logo{
+    height: 150px;
+    width: 400px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #FFF;
+    text-align: center; 
+}
+.broad-topic-container {
+    position: fixed;
+    font-family: Georgia, serif;
+    top:120px;
+    left: 0;
+    right: 0;
+    background-color: #501e4c;
+    color: #FFFF;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+
+.broad-topic-container button {
+    font-family: Georgia, serif;
+    color: #501e4c;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.broad-topic-container button.active {
+    font-family: Georgia, serif;
+
+    background-color: #501e4c;
+    color: white;
+    border: 2px solid #501e4c; /* Make it stand out more */
+}
+
+.sidebar {
+    position: fixed;
+    top: 150px; /* Below the broad topics */
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+}
+
+.sidebar .specific-topics button {
+    font-family: Georgia, serif;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    color: #501e4c;
+    cursor: pointer;
+}
+.main-content {
+    font-family: Georgia, serif;
+    margin-left: 270px; /* Leave space for the sidebar */
+    margin-top: 80px; /* Leave space for the broad topics */
+    padding: 20px;
+}
+.poll-section {
+    display: none;
+}
+.poll-section.active {
+    display: block;
+}
