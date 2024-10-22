@@ -3,12 +3,15 @@
 }
 header{
     display: flex;
+    flex-direction: column;
+    
     justify-content: space-between;
     align-items: center;
     background-color: #f4f4f4;
     color:  #501e4c;
     border-bottom: 1px solid #ccc;
-    width: 100%
+    width: 100%;
+    
 }
 body {
     font-family: Georgia, serif;
@@ -30,36 +33,28 @@ body {
 }
 
 .main-content-wrapper {
+    
     display: flex;
     flex-direction: row;
-    margin-top: 20px; /* Space between header and content */
+    margin-top: 20px; 
 }
 .story-link {
-    padding-right: 30px;
+    padding-top:10px;
+    padding-bottom:10px;
     text-decoration: none;
     font-size: 1rem;
     color: #0073e6;
 }
 
-
-/*@media (max-width: 768px) {
-    .title {
-        font-size: 1.4rem;
-        color: #501e4c;
-    }
-
-    .daily-logo { /make logo smaller on smaller screens
-        height: 60px; 
-    }
-*/
 .story-link:hover {
     text-decoration: underline;
 }
 
 .daily-logo {
-    width: 300px;
-    height: 150px;
-    padding-left: 30px;
+    width: 750px; /* 150px has poll title centered */
+    height: auto;
+    padding-top:30px;
+
 }
 
 .logo-link{
@@ -67,6 +62,7 @@ body {
 }
 
 .page-title {
+    padding-top:20px;
     flex-grow: 1;
     text-align: center;
     font-size: 36px;
@@ -84,49 +80,51 @@ h1 {
     flex-direction: row;
 }
 .broad-topic-container {
+    margin:20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem; /* Increased gap for better spacing */
     flex-direction: row;
     background-color: #501e4c;
-    padding: 0.3rem 0.6rem;
-    border: border-box;
+    padding: 1rem; /* More padding for a larger clickable area */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 
 .broad-topic-container button {
     background-color: transparent;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid transparent; /* Border for button */
+    border-radius: 5px; /* Rounded corners for buttons */
     cursor: pointer;
     font-size: 1rem;
-    padding: 0.3rem 0.6rem;
-    color: #FFFF;
-    transition: all 0.3s ease;
+    padding: 0.5rem 1rem; /* Increased padding for a better touch target */
+    color: #FFFFFF; /* Button text color */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
     font-family: var(--body-font);
 }
 
+.broad-topic-container button:hover {
+  
+    border: 2px solid #FFFFFF; /* White border on hover */
+}
 .broad-topic-container button.active {
     font-family: Georgia, serif;
-    display: flex;
-    width: 100%;
-    padding: 0.3rem 0.6rem;
-    margin-bottom: 5px;
-    border: none;
-    color: #FFFF;
-    cursor: pointer;
+   
+    border: 2px solid #FFFFFF; /* White border for active button */
+    margin-bottom: 0; /* Remove margin to keep alignment */
     text-decoration: underline;
 }
 
 .sidebar {
     position: fixed;
-    top: 200px; /* Below the broad topics */
+    top: 350px; /* Below the broad topics */
     bottom: 0;
     left: 0;
     width: 250px;
     padding: 20px;
-    color: white;
+    color: #501e4c;
     overflow-y: auto;
 }
 
@@ -137,9 +135,24 @@ h1 {
     padding: 10px;
     margin-bottom: 5px;
     border: none;
-    color: #501e4c;
+    color:  #501e4c; 
+    background-color: transparent; /* Make background transparent by default */
+    border-radius: 5px; /* Rounded corners */
     cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
+
+.sidebar .specific-topics button:hover {
+    background-color:#501e4c43; /* Light purple background on hover */
+    border: 2px solid #501e4c; /* Faint purple border on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.sidebar .specific-topics button.active {
+    text-decoration: underline;
+    border: 2px solid #501e4c; /* Faint purple border for active button */
+}
+
 .main-content {
     font-family: Georgia, serif;
     margin-left: 270px; /* Leave space for the sidebar */
