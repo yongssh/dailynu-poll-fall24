@@ -25,7 +25,7 @@ const topicsData = {
         { id: 'extracurriculars', label: 'Extracurriculars' },
         { id: 'legacy-and-relatives', label: 'Legacy and Relatives' },
     ],
-    Northwestern_Issues: [
+    NorthwesternIssues: [
         { id: 'generative-ai-use', label: 'Generative AI Use' },
         { id: 'satisfaction', label: 'Satisfaction' },
         { id: 'off-campus-rent', label: 'Off-Campus Rent' },
@@ -34,7 +34,7 @@ const topicsData = {
         { id: 'encampment-approval', label: 'Encampment Approval' },
         { id: 'deal-approval', label: 'Deal Approval' },
     ],
-    lifestyle: [
+    Lifestyle: [
         { id: 'alcohol', label: 'Alcohol' },
         { id: 'drugs', label: 'Drugs' },
         { id: 'sex-by-gender', label: 'Sex by Gender' },
@@ -66,6 +66,7 @@ const sections = document.querySelectorAll('.poll-section');
 // Iterate over each broad topic button
 broadTopicButtons.forEach(button => {
     button.addEventListener('click', () => {
+
         // Remove 'active' class from all broad topic buttons
         broadTopicButtons.forEach(btn => btn.classList.remove('active'));
         
@@ -99,10 +100,9 @@ if (topicsData[broadTopic]) {
             
             // Show the selected section
             const sectionElement = document.getElementById(topic.id);
+
             if (sectionElement) {
-    
                 sectionElement.classList.add('active');
-    
             }
         });
 

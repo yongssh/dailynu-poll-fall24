@@ -128,7 +128,7 @@ h1 {
     overflow-y: auto;
 }
 
-.sidebar .specific-topics button {
+.sidebar .specific-topic-button {
     font-family: Georgia, serif;
     display: block;
     width: 100%;
@@ -142,14 +142,15 @@ h1 {
     transition: background-color 0.3s ease; 
 }
 
-.sidebar .specific-topics button:hover {
+.sidebar .specific-topic-button:hover {
     background-color:#501e4c43; /* Light purple background on hover */
     border: 2px solid #501e4c; /* Faint purple border on hover */
     text-decoration: underline; /* Underline on hover */
 }
 
-.sidebar .specific-topics button.active {
+.sidebar .specific-topic-button.active {
     text-decoration: underline;
+    background-color:#501e4c43;
     border: 2px solid #501e4c; /* Faint purple border for active button */
 }
 
