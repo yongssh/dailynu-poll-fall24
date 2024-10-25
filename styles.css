@@ -4,11 +4,12 @@
 * {
     box-sizing: border-box;
 }
+
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:10px;
+    padding: 10px;
     background-color: #f4f4f4;
     color: #501e4c;
     border-bottom: 1px solid #ccc;
@@ -48,7 +49,7 @@ body {
 }
 
 .daily-logo {
-    width: 750px;
+    width: 500px;
     height: auto;
     padding-top: 30px;
 }
@@ -61,7 +62,7 @@ body {
     padding-top: 20px;
     flex-grow: 1;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
     color: #501e4c;
 }
@@ -73,20 +74,18 @@ h1 {
 }
 
 .broad-topic-container {
-    display:flex;
-    width: 100%;
-    margin: 20px;
     display: flex;
+    width: fit-content; 
+    margin: 20px auto;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     flex-direction: row;
     background-color: #501e4c;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 15px; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    overflow: auto;
+    overflow: hidden; 
 }
 
 .broad-topic-container button {
@@ -119,25 +118,28 @@ h1 {
     flex-wrap: wrap; 
 }
 
-.questions-and-dataviz{
+.questions-and-dataviz {
     display: flex;
-    
+    width: 100%;
+    margin: 0 auto;
     flex-direction: row;
 }
 
 .sidebar {
-    width: 18%;
+    display:flex;
+    width: fit-content;
+    align-self:baseline;
+    min-width: 250px;
     height: fit-content;
-    background-color: #FAFAFA;
     border-right: 2px solid #501e4c;
-    padding: 20px;
-    position: relative; 
-    top: 0;
+    padding: 10px;
+    top: 350px;
     left: 0;
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
-}
+    box-shadow: #ccc;
 
+}
 
 .sidebar.hidden {
     transform: translateX(-100%);
@@ -158,13 +160,10 @@ h1 {
     z-index: 1100;
 }
 
-
-
 .sidebar .specific-topic-button {
     font-family: Georgia, serif;
     display: block;
     width: 100%;
-    
     padding: 10px;
     margin-bottom: 5px;
     border: none;
@@ -173,7 +172,6 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: inline-block; 
 }
 
 .sidebar .specific-topic-button:hover {
@@ -189,20 +187,22 @@ h1 {
 }
 
 .main-content {
-    display:block;
+    display: flex;
     flex-wrap: wrap; 
-    flex:1;
-    width: 80%;
-
-    height: auto;
-    padding-left: 20px;
+    flex: 1;
+    width: 75%; 
+    min-height: 500px; 
+    padding-left: 10px;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center
 }
 
 .poll-section {
     display: none;
     width: 80%;
     background-color: #f9f9f9;
+   
 }
 
 .poll-section.active {
@@ -213,13 +213,15 @@ h1 {
     width: 100%;
     height: auto;
     border: none;
-    display:block;
+    display: block;
+    align-self:center;
 }
-.all-content{
+
+.all-content {
     display: flex;
-    width: fit-content;
+    width: 90%;
     flex-direction: column;
-    overflow:auto;
+    overflow: auto;
 }
 
 /* Mobile Style */
@@ -228,80 +230,136 @@ h1 {
         --main-bg-color: #FFFF;
         overflow: auto;
         flex-wrap: wrap;
-
     }
-    body{
-        display:flex;
+    body {
+        display: flex;
         flex-direction: column;
         margin: 0;
-        padding:0;
-        width:100%vw;
+        padding: 0;
+        width: 100vw;
     }
 
-
-    header{
-        display: flex; 
-        background-color: #FFFF;
-        flex-direction: column; 
-        justify-content: center;
+    header {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0; 
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding:0;
+        padding: 10px;
+        background-color: #f4f4f4; 
+        color: #501e4c;
+        border-bottom: 1px solid #ccc;
         width: 100%;
+      
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+    
     .daily-logo {
-        width: 80%;
-        align-self:center;
+        width: 50%;
+        align-self: center;
         height: auto;
         padding-top: 30px;
     }
-    .page-title{
+    .page-title {
         text-align: center;
-        margin:0;
+        margin: 0;
         padding: 10px 0;
+        font-size: 20px;
     }
-    
-    .main-content{
+
+    .main-content {
         flex: 1;
-        padding: 0;
+        width: 100%; 
+        padding-top: 100px;
     }
     .body-wrapper {
         flex-direction: column;
         align-items: stretch;
     }
-    .broad-topic-container{
-        width:90%;
+    .broad-topic-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row; 
+        gap: 5px;
+        padding: 0.5rem 0.5rem; 
+        width: 90%; 
+        margin: 20px auto;
+        top: 150px;
+        position:fixed;
+        align-self: center;
     }
-
+    .broad-topic-container button {
+        background-color: transparent;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 5px;
+        color: #FFFFFF;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        font-family: var(--body-font);
+    }
     .sidebar {
-        /* hide sidebar by default */
+        /* Hide sidebar by default */
         display: none; 
         background-color: #f4f4f4; 
         position: fixed;
+        padding-top: 100px;
         left: 0;
         top: 0;
-        width: 250px; 
+        width: fit-content; 
         height: 100%;
         overflow-y: auto; 
         z-index: 1000;
     }
-    .sidebar.active{
-        display:block;
-    }
-    .main-content {
-        width: 100%; 
-    }
-    .poll-section{
-        width: 80%;
-        flex: 1 1 100%
+    .sidebar.active {
+        display: block;
     }
     
-    .flourish-embed{
+    .poll-section {
+        width: 100%;
+        align-items: center;
+        flex: 1 1 100%;
+        overflow: auto;
+    }
+    
+    .flourish-embed {
         width: 100%;
         height: auto;
     }
-    /* Show toggle sidebar button on mobile!!! */
+    
+    /* Show toggle sidebar button on mobile */
+    /* Toggle Sidebar Button */
     .toggle-sidebar {
-        display: block; 
+        position: fixed;
+        top: 1rem;
+        bottom:1rem;
+        left: 1rem;
+        height: 30px;
+        width: 40px;
+        background-color: #501e4c; 
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1100; 
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hamburger Icon for Toggle Button */
+    .toggle-sidebar::before {
+        font-size: 1.5rem;
+        color: white;
+    }
+    .questions-and-dataviz {
+        overflow-x: auto;
+    }
+    .all-content{
+        padding-top: 175px;
+        width:100%;
     }
 }
-
