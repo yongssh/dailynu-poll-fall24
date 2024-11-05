@@ -1,6 +1,6 @@
 # Fall 2024 Interactive Polling Results Dashboard 
 
-An interactive dashboard to visualize the Daily Northwestern's inaugural student poll. 
+An interactive dashboard to visualize _The Daily Northwestern_'s inaugural undergraduate poll. 
 
 Interactive dashboard [here](https://apps.dailynorthwestern.com/polling-fall24/polling.html). 
 Article [here](https://dailynorthwestern.com/2024/10/23/campus/f24-poll/).
